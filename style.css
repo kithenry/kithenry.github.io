@@ -1,11 +1,18 @@
 /* || general section*/
+html {
+    width: 100%;
+}
 
 body {
     background-color:#151515;
-    color:#fff
+    color:#fff;
+    width: 100vw;
     }
 
-
+.main-container {
+    padding: 10px;
+    width: 80%;
+}
 
 /* || utilities section */
 
@@ -22,7 +29,8 @@ body {
 /* || specific designs */
     
     .about-me {
-    padding-top:5%
+    padding-top:9%;
+    /*! margin-bottom: 9px; */
     }
     
 
@@ -38,8 +46,8 @@ body {
     font-size:medium;
     font-weight:400;
     line-height:1.5em;
-    padding-top:8px;
-    margin-bottom:10px;
+    padding-top:0px;
+    margin-bottom:-18px;
     color:rgb(163,170,176);
     display: block
     }
@@ -65,7 +73,8 @@ body {
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    padding-top:12%
+    padding-top:16%;
+    /*! flex-basis: 33%; */
     }
     
     .feedback-data {
@@ -80,12 +89,12 @@ body {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 0
+    padding:0px 0;
     }
     
     .main-container {
     margin:auto;
-    width:700px
+    width:100vw;
     }
     
     .message {
@@ -126,7 +135,7 @@ body {
     }
     
     .project {
-    width:335px;
+    width:25%;
     margin:4px
     }
     
@@ -170,7 +179,7 @@ body {
     
     .section {
     width:100%;
-    margin-top:47px;
+    margin-top:25px;
     padding-bottom:7px
     }
     
@@ -187,13 +196,15 @@ body {
     }
     
     .tech-slide {
-    width:33.3%
+    width:fit-content;
+    padding: 10px;
+    flex-basis: 33%;
     }
     
     .tech-slide h1 {
-    font-size:2em;
-    font-weight:400;
-    padding-bottom:6px
+    font-size:1em;
+    font-weight:301;
+    padding-bottom:6px;
     }
     
     .tech-slide p {
