@@ -256,4 +256,227 @@ body {
     background-color:#151515;
     color:rgb(163,170,176)
     }
+
+@media screen and (min-width: 1024px) {
+  /* Styles for laptop screens */
+  /* || general section*/
+
+body {
+    background-color:#151515;
+    color:#fff
+    }
+
+
+
+/* || utilities section */
+
+
+/* || site wide */
+
+* {
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Tilt Neon',sans-serif
+    }
+
+
+/* || specific designs */
+    
+    .about-me {
+    padding-top:5%
+    }
+    
+
+    .intro {
+    font-size:2.5em;
+    font-weight:400;
+    line-height:1.5em;
+    letter-spacing:.003em
+    }
+
+    /* covering the small text in text right after the bold intro*/
+    .about-me small {
+    font-size:medium;
+    font-weight:400;
+    line-height:1.5em;
+    padding-top:8px;
+    margin-bottom:10px;
+    color:rgb(163,170,176);
+    display: block
+    }
+    
+
+
+
+
+    
+    .experience {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    padding-top:12%
+    }
+    
+    .feedback-data {
+    height:80%;
+    width:100%;
+    display:flex
+    }
+    
+    .header {
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 0
+    }
+    
+    .main-container {
+    margin:auto;
+    width:700px
+    }
+    
+    .message {
+    height:100%;
+    width:50%
+    }
+    
+    .message h1 {
+    font-size:2em;
+    font-weight:400;
+    padding-bottom:7px
+    }
+    
+    .logo {
+    font-weight:300;
+    font-size:1.4em
+    }
+    
+    .myprofile-pic {
+    position:absolute;
+    top:0;
+    right:0;
+    background-color:#242424;
+    height:100%;
+    width:48%;
+    z-index:-4
+    }
+    
+    .myprofile-pic img {
+    height:100%;
+    width:100%;
+    background-position:cover
+    }
+    
+    .name {
+    text-decoration:underline;
+    text-decoration-color:#4ee19f
+    }
+    
+    .project {
+    width:335px;
+    margin:4px
+    }
+    
+    .project .project-thumbnail {
+    height:70%;
+    width:100%;
+    margin-bottom:10px;
+    margin-top:15px
+    }
+    
+    .project .project-thumbnail img {
+    height:100%;
+    width:100%;
+    background-position:cover
+    }
+    
+
+    
+    .project h1 {
+    font-size:18px;
+    padding-bottom:12px
+    }
+    
+    .projects {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center
+    }
+    
+    .projects-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+    }
+    
+    .section {
+    width:100%;
+    margin-top:47px;
+    padding-bottom:7px
+    }
+    
+    .social-links {
+    display:flex;
+    align-items:center;
+    justify-content:center
+    }
+    
+    .social-links .icon {
+    height:27px;
+    width:27px;
+    margin:0 10px
+    }
+    
+    .tech-slide {
+    width:33.3%
+    }
+    
+    .tech-slide h1 {
+    font-size:2em;
+    font-weight:400;
+    padding-bottom:6px
+    }
+    
+    .tech-slide p {
+    font-size:small;
+    font-weight:400;
+    line-height:1.5em;
+    margin-bottom:10px;
+    color:rgb(163,170,176)
+    }
+    
+    .whoami {
+    height:300px;
+    width:100%;
+    position:relative
+    }
+    
+    .whoami-data {
+    width:100%;
+    height:100%;
+    position:relative
+    }
+    
+
+    
+    footer {
+    display:flex;
+    justify-content:space-between;
+    height:20%;
+    margin-top:45px;
+    padding:17px;
+    padding-left:0;
+    padding-right:0;
+    border-top:1px solid white
+    }
+    
+
+    
+
+    
+}
     
