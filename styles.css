@@ -1,0 +1,21 @@
+.bg-primary {
+    background-color: #f26522 !important;
+}
+
+
+.btn-info-custom {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+}
+
+.widget * {
+    padding: 5 !important;
+    line-height: 23px;
+    font-size: 16px !important;
+    border: none;
+    vertical-align: middle;
+}
+
+.header-nav {
+    background-color: #f7f8fa;
+}
