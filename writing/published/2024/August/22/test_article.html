@@ -31,18 +31,42 @@
             line-height: 1em;
         }
 
-        footer {
-            background-color: #b1624e;
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navlink {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hamburger-menu {
+            height: 35px;
+            display: none;
+            color: white;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .collapse-btn:focus {
+            box-shadow: none!important;
         }
 
         a {
             text-decoration: none;
-            color: #3da4b2;;
+            color: #3da4b2;
+            ;
         }
 
         .site-title {
             font-family: 'Alegreya Sans SC', sans-serif !important;
             text-transform: capitalize;
+            font-size: 36px;
         }
 
         img {
@@ -59,6 +83,19 @@
 
         .heading {
             width: 100%;
+            font-weight: 300;
+            line-height: 1.25;
+            margin-bottom: 10px;
+        }
+
+        .green-line {
+            width: 100%;
+            height: 10px;
+            background-color: #3da4b2;
+        }
+
+        p {
+            margin-bottom: 1em;
         }
 
         .date {
@@ -73,23 +110,148 @@
         }
 
         .navlink a:hover {
-            color: #3da4b2!important;
+            color: #3da4b2 !important;
+        }
+
+        .icon-toggle {
+            display: none;
+        }
+
+        .icon-toggle i {
+            height: 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .follow-icons {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .follow-icons h4 {
+            border-bottom: 0px solid #DDDDDD;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-family: 'Alegreya Sans SC', sans-serif !important;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .icons i {
+            height: 45px;
+            font-size: 20px;
+            width: 45px;
+            background-color: gray;
+            opacity: .6;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 15px;
+            margin-bottom: 4px;
+        }
+
+        .icon-list {
+            padding: 5px;
         }
 
         .about-me {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
             border-bottom: 0px solid #DDDDDD;
-  color: #FFFFFF;
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-  font-family: 'Alegreya Sans SC', sans-serif !important;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-family: 'Alegreya Sans SC', sans-serif !important;
         }
+
+        .about-pic,
+        .about-text {
+            margin: 0 5px;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a.button {
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            border: 2px solid #fff;
+            padding: 7px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: white;
+            max-width: fit-content;
+        }
+
+        .about-text h4 {
+            border-bottom: 0px solid #DDDDDD;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-family: 'Alegreya Sans SC', sans-serif !important;
+        }
+
+        .about-text p {
+            color: #FFFFFF;
+            font-family: 'Crimson Text', serif;
+            font-size: 20px;
+        }
+
+        .pages {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin-left: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .pages a {
+            color: #fff;
+        }
+
+        footer {
+            background-color: #b1624e;
+        }
+
+
+        .copyright {
+            color: #252525;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            font-family: 'Alegreya Sans SC', sans-serif !important;
+        }
+
+
+
+
+
+
+
+
 
 
         @media (min-width: 770px) {
             article {
                 width: 60%;
                 margin: 0 auto
-            }   
+            }
         }
 
         @media (max-width: 330px) {
@@ -107,38 +269,126 @@
                 display: none;
             }
         }
+
+        @media (max-width: 603px) {
+            header row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #navlinks {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+                height: 20px;
+                width: 25px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .icons {
+                flex-direction: column;
+            }
+
+            .icon-list {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-list li {
+                padding: 5px;
+            }
+
+            .about-me {
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .about-text a {
+                text-align: center;
+            }
+
+            .page-list {
+                display: flex;
+                justify-content: center;
+            }
+
+            .page-list li {
+                padding: 5px;
+            }
+
+            a.contact-me-btn {
+                align-items: center;
+                justify-self: center;
+                max-width: none;
+                margin: 0 auto;
+            }
+
+
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid p-0">
-        <header >
-            <div class="container">
-                <div class="row text-nowrap text-white">
-                    <div class="col-5 p-2 ms-0 ps-0 site-title">
-                        <h2 class="">
-                            K(e)ith N. Henry
-                        </h2>
-                    </div>
-              
-                    <div class="col-7">
-                        <div class="widget text-nowrap overflow-hidden rm-0  ">
-                            <ul class=" p-3 pt-4 navlink list-unstyled list-inline d-flex flex-row justify-content-end">
-                                <li class="pe-2">
-                                    <a href="" class="p-0">Articles</a>
-                                </li>
-                                <li class="pe-2">
-                                    <a href="" class="p-0">Home</a>
-                                </li>
-                                <li class="">
-                                    <a href="" class="p-0">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        <header>
+            <div class="container header-container text-nowrap text-white">
+
+                <div class="p-2 site-title">
+                    <h2 class="">
+                        K(e)ith N. Henry
+                    </h2>
+                </div>
+
+
+
+                <ul id="navlinks" class=" p-3 pt-4 navlink list-unstyled list-inline">
+                    <li class="pe-2">
+                        <a href="" class="p-0">Articles</a>
+                    </li>
+                    <li class="pe-2">
+                        <a href="" class="p-0">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="" class="p-0">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="hamburger-menu">
+                    <button class="btn collapse-btn text-white p-0 pb-4 mb-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                </div>
+            </div>
+            <div class=" green-line">
+                <div class="collapse" id="collapseExample">
+                    <!-- <div class="card card-body">
+                        Some placeholder content for the collapse component. This panel is hidden by default but
+                        revealed when the user activates the relevant trigger.
+                    </div> -->
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                      </ul>
                 </div>
             </div>
         </header>
+
         <div class="container">
 
 
@@ -170,70 +420,106 @@
         </div>
     </div>
     <footer>
-        <div class="container-fluid p-0  text-white">
-            <div class="container px-0">
-                <div class="row d-flex flex-row justify-content-even gx-3">
-                 <div class="col-2 folow-links">
-                        <h4>FOLLOW</h4>
-                        <ul class="list-unstyled">
-                            <li></li>
-                                
-                                    <i class="fa fa-github" aria-hidden="true"></i>
-                                
-                            </li>
-                            <li>
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+        <div class="container-fluid p-0  text-white footer-container">
 
-                            </li>
-                            <li>
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
 
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-7 about-me d-flex flex-row">
-                        <div class="about-pic img-round img-fluid">
-                            <img src="../../../../../assets/images/myface-in-bw_img07.jpg" alt="">
-                        </div>
-                        <div class="about-text">
-                            <h4>ABOUT ME</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam quos repellat ut illo.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-3 pages ps-3" style="padding-left: 10px;">
-                        <h4>PAGES</h4>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="">ARTICLES</a>
-                                
-                            </li>
-                            <li>
-                                <a href="">CONTACT</a>
-                            </li>
-                            <li>
-                                <a href="">HOME</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="follow-icons">
+                <h4 class="">FOLLOW</h4>
+
+
+                <div class="icons">
+
+                    <ul class="list-unstyled icon-list 1">
+                        <li>
+
+                            <i class="fa fa-github" aria-hidden="true"></i>
+
+                        </li>
+                        <li>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                        </li>
+                        <li>
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled icon-list 2">
+                        <li>
+
+                            <i class="fa fa-github" aria-hidden="true"></i>
+
+                        </li>
+                        <li>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                        </li>
+                        <li>
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+
+                        </li>
+                    </ul>
                 </div>
-                
+
+
             </div>
-    
+            <div class="about-me">
+                <div class="about-pic">
+                    <img src="../../../../../assets/images/myface-in-bw_img07.jpg"
+                        class=" rounded-circle img-fluid border border-3" alt="">
+                </div>
+                <div class="about-text">
+                    <h4>ABOUT ME</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam quos
+                        repellat ut illo.
+                    </p>
+                    <a class="button contact-me-btn">Contact
+                        Me</a>
+                </div>
+            </div>
+            <div class="pages">
+                <h4>PAGES</h4>
+                <ul class="list-unstyled page-list">
+                    <li>
+                        <a href="">ARTICLES</a>
+
+                    </li>
+                    <li>
+                        <a href="">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
         </div>
         <div class="container-fluid bg-light text-dark">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <h5>
-                            COPYRIGHT 2024. ALL RIGHTS RESERVED
+                    <div class="col-12 text-center mt-1">
+                        <h5 class="copyright">
+                            © COPYRIGHT 2024. ALL RIGHTS RESERVED
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navlinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
