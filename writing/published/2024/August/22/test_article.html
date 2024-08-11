@@ -23,12 +23,33 @@
             font-family: "Book Antiqua", Palatino, "EB Garamond", serif;
         }
 
+        header {
+            font-family: 'Roboto', sans-serif;
+            background-color: #b1624e;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 1em;
+        }
+
+        footer {
+            background-color: #b1624e;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3da4b2;;
+        }
+
+        .site-title {
+            font-family: 'Alegreya Sans SC', sans-serif !important;
+            text-transform: capitalize;
+        }
+
         img {
             height: 300px;
         }
 
         p {
-
             line-height: 1.5625;
         }
 
@@ -41,17 +62,34 @@
         }
 
         .date {
-            color: #0d6efd;
+            color: #3da4b2;
             font-size: 19px;
             border-top: 1px solid #b9cdeb;
             border-bottom: 1px solid #b9cdeb;
         }
 
+        .navlink a {
+            color: white !important;
+        }
+
+        .navlink a:hover {
+            color: #3da4b2!important;
+        }
+
+        .about-me {
+            border-bottom: 0px solid #DDDDDD;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-family: 'Alegreya Sans SC', sans-serif !important;
+        }
+
+
         @media (min-width: 770px) {
             article {
                 width: 60%;
                 margin: 0 auto
-            }
+            }   
         }
 
         @media (max-width: 330px) {
@@ -74,24 +112,28 @@
 
 <body>
     <div class="container-fluid p-0">
-        <header class="bg-primary">
+        <header >
             <div class="container">
                 <div class="row text-nowrap text-white">
-                    <div class="col-2">
+                    <div class="col-5 p-2 ms-0 ps-0 site-title">
                         <h2 class="">
                             K(e)ith N. Henry
                         </h2>
                     </div>
-                    <div class="col-8">
-                        <div class="widget no-border m-0">
-
-                        </div>
-                    </div>
-                    <div class="col-2 socials">
-                        <div class="widget text-nowrap overflow-hidden rm-0 py-2">
-                            <h4>
-                                Connect
-                            </h4>
+              
+                    <div class="col-7">
+                        <div class="widget text-nowrap overflow-hidden rm-0  ">
+                            <ul class=" p-3 pt-4 navlink list-unstyled list-inline d-flex flex-row justify-content-end">
+                                <li class="pe-2">
+                                    <a href="" class="p-0">Articles</a>
+                                </li>
+                                <li class="pe-2">
+                                    <a href="" class="p-0">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="" class="p-0">Contact</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -128,18 +170,66 @@
         </div>
     </div>
     <footer>
-        <div class="container-fluid p-0 bg-primary text-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">K(e)ith N. Henry</div>
-                    <div class="col-md-6 ">
+        <div class="container-fluid p-0  text-white">
+            <div class="container px-0">
+                <div class="row d-flex flex-row justify-content-even gx-3">
+                 <div class="col-2 folow-links">
+                        <h4>FOLLOW</h4>
+                        <ul class="list-unstyled">
+                            <li></li>
+                                
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                
+                            </li>
+                            <li>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
 
+                            </li>
+                            <li>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-7 about-me d-flex flex-row">
+                        <div class="about-pic img-round img-fluid">
+                            <img src="../../../../../assets/images/myface-in-bw_img07.jpg" alt="">
+                        </div>
+                        <div class="about-text">
+                            <h4>ABOUT ME</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ullam quos repellat ut illo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3 pages ps-3" style="padding-left: 10px;">
+                        <h4>PAGES</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="">ARTICLES</a>
+                                
+                            </li>
+                            <li>
+                                <a href="">CONTACT</a>
+                            </li>
+                            <li>
+                                <a href="">HOME</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row ">
-                    <p>
-                        Copyright 2024
-                    </p>
+                
+            </div>
+    
+        </div>
+        <div class="container-fluid bg-light text-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h5>
+                            COPYRIGHT 2024. ALL RIGHTS RESERVED
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
