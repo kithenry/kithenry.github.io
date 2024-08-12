@@ -60,7 +60,13 @@ footer {
 
 /* || UTILITIES */
 /* Classses that tamper with the default to effect some customization*/
+.collapse {
+    z-index: 3000000000!important;
+}
 
+.card {
+    z-index: 3000000!important;
+}
 
 /* || SITEWIDE */
 /* Styles used site wide*/
