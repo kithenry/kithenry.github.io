@@ -74,7 +74,7 @@ header .header-container {
 }
 
 header .site-title {
-    font-family: var(--title-font);
+    font-family: var(--base-font);
     text-transform: capitalize;
     font-size: 36px;
 }
@@ -94,6 +94,8 @@ header a {
 header a:hover {
     color: var(--color-secondary);
 }
+
+
 
 .green-line {
     width: 100%;
@@ -196,7 +198,7 @@ header a:hover {
     font-size: 20px;
 }
 
-.about-text a.button {
+.button {
     text-transform: uppercase;
     font-family: var(--header-font);
     border: 2px solid var(--color-light);
@@ -207,6 +209,23 @@ header a:hover {
     display: inline-block;
     color: var(--color-light);
     max-width: max-content;
+    transition: all .5s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.button-plain-bg {
+    color: var(--color-secondary)!important;
+    border-color: var(--color-secondary);
+    border-radius: 0;
+}
+
+.button-plain-bg:hover {
+    color: var(--color-light)!important;
+    background-color: var(--color-secondary);
 }
 
 
