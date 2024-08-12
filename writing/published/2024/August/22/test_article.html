@@ -29,7 +29,6 @@
         }
 
 
-
         p {
             line-height: 1.5625;
             margin-bottom: 1em;
@@ -103,18 +102,11 @@
         }
 
 
-
-
-
-
-
-
-
         article {
             margin: 0 auto
         }
 
-        article .heading > h1{
+        article .heading>h1 {
             width: 100%;
             font-weight: 300;
             line-height: 1.25;
@@ -137,7 +129,7 @@
         }
 
 
-        footer .footer-container {
+        .footer-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -159,13 +151,13 @@
             font-family: 'Alegreya Sans SC', sans-serif !important;
         }
 
-        .icons {
+        .follow-icons .icons {
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
 
-        .icons i {
+        .follow-icons .icons i {
             height: 45px;
             font-size: 20px;
             width: 45px;
@@ -174,11 +166,7 @@
             border-radius: 50%;
             text-align: center;
             padding-top: 15px;
-            margin-bottom: 4px;
-        }
-
-        .icons .icon-list {
-            padding: 5px;
+            margin-bottom: 4.5px;
         }
 
         .about-me {
@@ -202,19 +190,6 @@
             flex-direction: column;
         }
 
-        .about-text a.button {
-            text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
-            border: 2px solid #fff;
-            padding: 7px 20px;
-            font-size: 16px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            display: inline-block;
-            color: white;
-            max-width: fit-content;
-        }
-
         .about-text h4 {
             border-bottom: 0px solid #DDDDDD;
             color: #FFFFFF;
@@ -228,6 +203,23 @@
             font-family: 'Crimson Text', serif;
             font-size: 20px;
         }
+
+        .about-text a.button {
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            border: 2px solid #fff;
+            padding: 7px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: white;
+            max-width: max-content;
+            
+
+        }
+
+
 
         .pages {
             display: flex;
@@ -244,7 +236,7 @@
             color: #fff;
         }
 
-        
+
 
         .copyright {
             color: #252525;
@@ -253,14 +245,6 @@
             text-align: center;
             font-family: 'Alegreya Sans SC', sans-serif !important;
         }
-
-
-
-
-
-
-
-
 
 
         @media (min-width: 770px) {
@@ -281,20 +265,12 @@
                 height: 200px;
             }
 
-            .socials {
-                display: none;
-            }
+
         }
 
         @media (max-width: 603px) {
-            header row {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
 
-            #navlinks {
+            header #navlinks {
                 display: none;
             }
 
@@ -311,6 +287,7 @@
 
             .icons {
                 flex-direction: column;
+                padding-bottom: 0px;
             }
 
             .icon-list {
@@ -322,16 +299,28 @@
 
             .icon-list li {
                 padding: 5px;
+                padding-bottom: 0;
+                
             }
 
             .about-me {
                 flex-direction: column;
                 align-items: center;
-
             }
 
-            .about-text a {
-                text-align: center;
+            .about-pic {
+                margin-bottom: 6px;
+                margin-top: 0px
+            }
+           
+            .about-text {
+                display: block!important;
+            }
+            a.contact-me-btn {
+                margin: 0;
+                margin-bottom: 0;
+                max-width: none;
+                margin: 0 auto;
             }
 
             .page-list {
@@ -343,12 +332,7 @@
                 padding: 5px;
             }
 
-            a.contact-me-btn {
-                align-items: center;
-                justify-self: center;
-                max-width: none;
-                margin: 0 auto;
-            }
+           
 
 
         }
