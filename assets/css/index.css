@@ -60,13 +60,16 @@ footer {
 
 /* || UTILITIES */
 /* Classses that tamper with the default to effect some customization*/
+/* .collapse {
+    position: relative; /* or fixed/absolute depending on your layout */
+    /* z-index: 1050; Bootstrap uses 1050 for dropdowns by default */ */
+
 .collapse {
-    z-index: 3000000000!important;
+    transition: height 0.1s ease; /* Shorten the transition duration */
 }
 
-.card {
-    z-index: 3000000!important;
-}
+
+
 
 /* || SITEWIDE */
 /* Styles used site wide*/
@@ -81,8 +84,8 @@ header .header-container {
 
 header .site-title {
     font-family: var(--base-font);
-    text-transform: capitalize;
     font-size: 36px;
+    text-transform: none;
 }
 
 header .navlinks {
@@ -170,6 +173,7 @@ header a:hover {
     text-align: center;
     padding-top: 15px;
     margin-bottom: 4.5px;
+    margin-right: 6px;
 }
 
 .about-me {
@@ -201,7 +205,7 @@ header a:hover {
 .about-text p {
     color: var(--color-light);
     font-family: 'Crimson Text', serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .button {
@@ -267,22 +271,23 @@ header a:hover {
 
 /* Article Page */
 
-article {
-    margin: 0 auto
+.main-content {
+    margin: 0 auto!important;
 }
 
-article .heading>h1 {
+.heading>h1 {
     width: 100%;
     font-weight: 300;
     line-height: 1.25;
     margin-bottom: 10px;
 }
 
-article .date {
+.date {
     color: var(--color-secondary);
     font-size: 19px;
     border-top: 1px solid #b9cdeb;
     border-bottom: 1px solid #b9cdeb;
+    margin-bottom: 8px;
 }
 
 
@@ -374,8 +379,8 @@ article .date {
 }
 
 @media (min-width: 770px) {
-    article {
-        width: 60%;
+    .main-content {
+        width: 66%;
         margin: 0 auto
     }
-}
+} 
