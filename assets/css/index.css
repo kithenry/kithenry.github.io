@@ -230,7 +230,13 @@ header a:hover {
     display: inline-block;
     color: var(--color-light);
     max-width: max-content;
-    transition: all .5s ease-in-out;
+    transition: var(--base-transition);
+}
+
+.submit-button button {
+    width: 100%;
+    transition: var(--base-transition);
+    background-color: var(--color-light);
 }
 
 .button:hover {
@@ -287,6 +293,9 @@ footer a {
 
 /* Article Page */
 
+
+
+
 .main-content {
     margin: 0 auto!important;
 }
@@ -305,6 +314,13 @@ footer a {
     border-bottom: 1px solid #b9cdeb;
     margin-bottom: 8px;
 }
+
+.category-div button {
+    background-color: var(--color-light);
+    transition: var(--base-transition);
+}
+
+
 
 
 /* Media Queries */
