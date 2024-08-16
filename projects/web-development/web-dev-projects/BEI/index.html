@@ -28,6 +28,9 @@
 			/* font sizes */
 			--button-font-size: 11px;
 
+			/* margin and padding */
+			--base-margin: 3px;
+
 			* {
 				box-sizing: border-box;
 			}
@@ -86,12 +89,122 @@
 
 			}
 
+			.header-wrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
 			.statement {
 				border: 1px solid var(--base-color);
 				background-color: var(--btn-bg-primary);
 			}
 
+			.pics-text-wrapper {
+				display: flex;
+				flex-direction: row;
+			}
 
+			.right-section,
+			.left-section {
+				display: flex;
+				width: 50%;
+			}
+
+			.left-section {
+				border: 2px solid red;
+			}
+
+			.left-single,
+			.left-double {
+				width: 50%;
+				border: 2px solid black;
+			}
+
+			.left-single {
+				margin-right: var(--base-margin);
+			}
+
+			.left-single img, .left-double img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.left-double {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				margin-left: var(--base-margin);
+			
+			}
+
+			.left-double-wrapper-1, .left-double-wrapper-2 {
+				height: 50%;
+			}
+
+			.left-double-wrapper-1 {
+				margin-bottom: var(--base-margin);
+			}
+
+			.left-double-wrapper-2 {
+				margin-top: var(--base-margin);
+			}
+
+			
+
+			.right-section {
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				border: 1px solid green;
+				margin-left: 5px;
+			}
+
+
+
+			@media (max-width:984px) {
+
+				.header-wrapper {
+					flex-direction: column;
+				}
+				.pics-text-wrapper {
+					flex-direction: column;
+				}
+
+				.left-section {
+					width: 100%;
+					flex-direction: column;
+
+				}
+
+				.left-single,
+				.left-double {
+					width: 100%;
+				}
+
+				/* .left-single img {
+					display: none;
+				} */
+
+				/* .left-single {
+					background-image: url('./assets/images/img01.jpg');
+					
+				} */
+
+				img {
+					padding: 5px 0;
+				}
+
+				.left-double {
+					flex-direction: column;
+				}
+
+				.right-section {
+					width: 100%;
+					margin: auto;
+				}
+			}
 
 
 
@@ -102,8 +215,9 @@
 <body>
 	<header>
 		<div class="container">
-			<div class="row">
-				<div class="col-2 social-widget text-white d-flex flex-row align-items-center">
+			<div class="header-wrapper">
+				<div
+					class="w-17 social-widget text-white d-flex flex-row align-items-center justify-content-center text-center">
 					<ul class="list-unstyled d-flex flex-row align-items-center p-0 m-0">
 						<li>
 							<i class="fa  fa-facebook"></i>
@@ -119,8 +233,8 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-8 contact-whrs text-white d-flex flex-row justify-content-end">
-					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center">
+				<div class="w-66 contact-whrs text-white d-flex flex-row justify-content-center">
+					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center text-nowrap px-3">
 						<li>
 							<i class="fa fa-phone"></i>
 							0323232323
@@ -135,7 +249,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-2 ps-0 donate-join-btns">
+				<div class="w-17 ps-0 donate-join-btns d-flex flex-row justify-content-center align-items-center">
 					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center flex-nowrap">
 						<li>
 							<button class="btn btn-default btn-flat f-11 text-nowrap">
@@ -184,8 +298,7 @@
 
 			<div class="carousel-item active">
 				<img src="./assets/images/img04.jpg" class="d-block w-100" alt="...">
-				<div
-					class="pt-0 mt-0 carousel-caption d-none d-md-flex flex-column align-items-center justify-content-center ">
+				<div class="pt-0 mt-0 carousel-caption d-flex flex-column align-items-center justify-content-center ">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -196,7 +309,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img06.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-flex  flex-column justify-content-center  align-items-center ">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -207,7 +320,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img07.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-flex  flex-column justify-content-center align-items-center">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -230,42 +343,49 @@
 	</div>
 	</section>
 	<section id="donate-cta-pics">
-		<div class="container pics-text mt-4">
-			<div class="row">
-				<div class="col-6 col-md-6">
-					<div class="row">
-						<div class="col-6 p-0">
-							<img src="./assets/images/img01.jpg" alt="" class="img-fluid w-100">
-						</div>
-						<div class="col-6 d-flex flex-column justify-content-between">
-							<img src="./assets/images/img02.jpg" alt="" class="img-fluid" style="height: 48%;">
-							<img src="./assets/images/img03.jpg" alt="" class="img-fluid" style="height: 48%;">
-						</div>
+		<div class="container pics-text-wrapper mt-4">
+
+			<div class="left-section">
+
+				<div class="left-single">
+					<div class="left-single-wrapper">
+						<img src="./assets/images/img01.jpg" alt="" class="img-fluid">
 					</div>
 
-
 				</div>
-				<div class="col-6 col-md-6 py-0 my-0 d-flex flex-column justify-content-between">
-					<h2 class="f-30 fw-bold">
-						Lorem ipsum dolor sit amet.
-					</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae iure ad. Itaque,
-						voluptates alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci non
-						id! Reprehenderit amet nesciunt libero eos obcaecati totam dolores!
-					</p>
-					<div class="cta-buttons">
-						<button class="f-15 btn-primary btn-flat">
-							Donate
-						</button>
-						<button class="f-15 btn-primary btn-flat">
-							Join
-						</button>
+				<div class="left-double">
+					<div class="left-double-wrapper-1">
+						<img src="./assets/images/img02.jpg" alt="" class="img-fluid">
 					</div>
-
-
+					<div class="left-double-wrapper-2">
+						<img src="./assets/images/img03.jpg" alt="" class="img-fluid">
+					</div>
 				</div>
+
+
+
 			</div>
+			<div class="right-section">
+				<h2 class="f-30 fw-bold">
+					Lorem ipsum dolor sit amet.
+				</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae iure ad. Itaque,
+					voluptates alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci non
+					id! Reprehenderit amet nesciunt libero eos obcaecati totam dolores!
+				</p>
+				<div class="cta-buttons">
+					<button class="f-15 btn-primary btn-flat">
+						Donate
+					</button>
+					<button class="f-15 btn-primary btn-flat">
+						Join
+					</button>
+				</div>
+
+
+			</div>
+
 
 
 
@@ -321,7 +441,7 @@
 	<section id="mission-statement">
 		<div class="container mt-5">
 			<div class="row mb-3">
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6 mb-3">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -333,7 +453,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -347,7 +467,7 @@
 				</div>
 			</div>
 			<div class="row mb-3">
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6 mb-3">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -360,7 +480,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6 ">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -452,7 +572,7 @@
 					<li class="ps-3"> www.gmail.com</li>
 				</ul>
 			</div>
-			
+
 		</div>
 		<div class="copyright-div w-100 text-capitalize text-center text-white bg-dark py-3">
 			Copyright 2024. All rights reserved.
