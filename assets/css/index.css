@@ -291,6 +291,21 @@ footer a {
 
 /* || Specific page by page, context by context styling... */
 
+
+/* Home Page */
+
+.custom-row {
+    width: 100%;
+}
+
+.custom-row-item {
+    width: 30%;
+}
+
+.custom-row-item button {
+    width: 100%;
+}
+
 /* Article Page */
 
 

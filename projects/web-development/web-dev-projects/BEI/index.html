@@ -99,6 +99,7 @@
 			.statement {
 				border: 1px solid var(--base-color);
 				background-color: var(--btn-bg-primary);
+				padding: 10px;
 			}
 
 			.pics-text-wrapper {
@@ -112,21 +113,19 @@
 				width: 50%;
 			}
 
-			.left-section {
-				border: 2px solid red;
-			}
+
 
 			.left-single,
 			.left-double {
 				width: 50%;
-				border: 2px solid black;
 			}
 
 			.left-single {
 				margin-right: var(--base-margin);
 			}
 
-			.left-single img, .left-double img {
+			.left-single img,
+			.left-double img {
 				width: 100%;
 				height: 100%;
 			}
@@ -136,10 +135,11 @@
 				flex-direction: column;
 				justify-content: space-evenly;
 				margin-left: var(--base-margin);
-			
+
 			}
 
-			.left-double-wrapper-1, .left-double-wrapper-2 {
+			.left-double-wrapper-1,
+			.left-double-wrapper-2 {
 				height: 50%;
 			}
 
@@ -151,14 +151,13 @@
 				margin-top: var(--base-margin);
 			}
 
-			
+
 
 			.right-section {
 				flex-direction: column;
 				justify-content: space-between;
-				align-items: center;
-				border: 1px solid green;
-				margin-left: 5px;
+				/* align-items: center; */
+				margin-left: calc(var(--base-margin)*4);
 			}
 
 
@@ -168,6 +167,7 @@
 				.header-wrapper {
 					flex-direction: column;
 				}
+
 				.pics-text-wrapper {
 					flex-direction: column;
 				}
@@ -214,21 +214,18 @@
 
 <body>
 
-		<p class="d-sm-block d-md-none">
-			
-	This site ain't ready for a screen this wide yet.
-	</p>
-	<div class="wrapper d-sm-none d-md-block">
+
+
 
 
 	<header>
-		<div class="container">
-			<div class="header-wrapper">
+		<div class="container px-0">
+			<div class="header-wrapper ">
 				<div
 					class="w-17 social-widget text-white d-flex flex-row align-items-center justify-content-center text-center">
 					<ul class="list-unstyled d-flex flex-row align-items-center p-0 m-0">
 						<li>
-							<i class="fa  fa-facebook"></i>
+							<i class="fa  fa-facebook pe-0"></i>
 						</li>
 						<li>
 							<i class="fa fa-twitter"></i>
@@ -242,7 +239,7 @@
 					</ul>
 				</div>
 				<div class="w-66 contact-whrs text-white d-flex flex-row justify-content-center">
-					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center text-nowrap px-3">
+					<ul class="list-unstyled m-0 p-0 d-flex flex-column flex-md-row align-items-center text-nowrap">
 						<li>
 							<i class="fa fa-phone"></i>
 							0323232323
@@ -266,7 +263,7 @@
 
 						</li>
 						<li>
-							<button class="btn btn-default btn-flat f-11 text-nowrap">
+							<button class="btn btn-default btn-flat f-11 text-nowrap me-0">
 								Join Us
 							</button>
 						</li>
@@ -277,8 +274,8 @@
 	</header>
 	<nav class="sticky-top">
 		<div class="container">
-			<div class="row">
-				<div class="col-5 nav-brand d-flex flex-column py-3">
+			<div class="row px-3">
+				<div class="col-5 nav-brand d-flex flex-column py-3 ps-0">
 					<p class="ps-0 mb-0">Bududa Education Initiative</p>
 					<small class=" m-0 f-5 d-block">Extending Opportunity</small>
 				</div>
@@ -293,7 +290,7 @@
 		</div>
 	</nav>
 
-	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
 				aria-current="true" aria-label="Slide 1"></button>
@@ -306,7 +303,8 @@
 
 			<div class="carousel-item active">
 				<img src="./assets/images/img04.jpg" class="d-block w-100" alt="...">
-				<div class="pt-0 mt-0 carousel-caption d-flex flex-column align-items-center justify-content-center ">
+				<div
+					class="pt-0 mt-0 carousel-caption d-none d-md-flex flex-column align-items-center justify-content-center ">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -317,7 +315,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img06.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-flex  flex-column justify-content-center  align-items-center ">
+				<div class="carousel-caption d-none d-md-flex  flex-column justify-content-center  align-items-center ">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -328,7 +326,7 @@
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img07.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-flex  flex-column justify-content-center align-items-center">
+				<div class="carousel-caption d-none d-md-flex  flex-column justify-content-center align-items-center">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
@@ -348,6 +346,24 @@
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
+	</div>
+	<div class="jumbotron-wrapper d-block d-md-none" style="background-image: url(./assets/images/img04.jpg);
+		background-position: center;
+		background-size: cover;">
+		<div class="container py-4">
+			<div class="jumbotron text-white">
+				<h1 class="display-4">DONATE</h1>
+				<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+					attention to featured content or information.</p>
+				<hr class="my-4">
+				<p>It uses utility classes for typography and spacing to space content out within the larger
+					container.</p>
+				<p class="lead">
+					<a class="btn btn-primary btn-lg" href="#" role="button">Donate Now</a>
+				</p>
+			</div>
+		</div>
+
 	</div>
 	</section>
 	<section id="donate-cta-pics">
@@ -455,7 +471,8 @@
 						<div class="statement-text">
 							<h2>Lorem, ipsum dolor.</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum, culpa
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum,
+								culpa
 								nesciunt.
 							</p>
 						</div>
@@ -467,7 +484,8 @@
 						<div class="statement-text">
 							<h2>Lorem, ipsum dolor.</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum, culpa
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum,
+								culpa
 								nesciunt.
 							</p>
 						</div>
@@ -477,7 +495,10 @@
 			<div class="row mb-3">
 				<div class="col-sm-6 mb-3">
 					<div class="statement">
-						<img src="" alt="">
+						
+						<div class="graphic">
+							<img src="" alt="">
+						</div>
 						<div class="statement-text">
 							<h2>Lorem, ipsum dolor.</h2>
 							<p>
@@ -521,20 +542,20 @@
 				</div>
 			</div>
 
-			<div class="row section-pics">
-				<div class="col-md-4">
+			<div class="row section-pics align-items-center justify-content-center">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img13.jpg" alt="">
 						<p>Sakib Bobpon</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img14.jpg" alt="">
 						<p>Jero Hus</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img15.jpg" alt="">
 						<p>Epoa Wio</p>
@@ -547,14 +568,21 @@
 		</div>
 	</section>
 	<section id="cta-contact">
+
 		<div class="container-fkuid p-0 text-white">
-			<div class="cta-text text-center bg-dark py-3 opacity-50">
+			<div class="cta-text text-center bg-dark py-3 opacity-96" style="background-image: url('./assets/images/img17.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;">
 				<P class="">
 					How you can reach out to help.
 				</P>
 				<p>
 					Just call <span>493490433</span>
 				</p>
+			</div>
+			<div class="cta-text-overlay">
+
 			</div>
 		</div>
 
@@ -563,18 +591,51 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 form-div">
-					<form action="">
+					<div class="card w-100 my-4 ps-4">
+						<div class="card-body">
+							<h5 class="card-title text-center py-2">Volunteer Registration Form</h5>
+							<form action="">
+								<div class="row">
+									<div class="ps-1 form-floating mb-3 col-sm-6">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3">First Name</label>
+									</div>
+									<div class="ps-1 form-floating mb-3 col-sm-6">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3 ms-0">Last Name</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="ps-1 form-floating mb-3 col-sm-12">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3">Email</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<button class="py-3 w-100 btn-primary rounded">Apply Now</button>
+									</div>
+								</div>
 
-					</form>
+
+
+
+
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<footer>
 		<div class="container">
-			<div class="footer-contact d-flex flex-row align-items-center justify-content-between">
+			<div class="footer-contact d-flex flex-column flex-md-row align-items-center justify-content-between">
 				<p>BEI</p>
-				<ul class="list-unstyled list-inline d-flex flex-row ">
+				<ul class="list-unstyled list-inline d-flex flex-column flex-md-row justify-content-center align-items-center ">
 					<li class="ps-3"> 123-456-789</li>
 					<li class="ps-3"> contact@gmail.com</li>
 					<li class="ps-3"> www.gmail.com</li>
@@ -587,7 +648,7 @@
 		</div>
 
 	</footer>
-	</div>
+
 </body>
 
 </html>
