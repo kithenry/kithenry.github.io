@@ -307,6 +307,7 @@ footer a {
 
 .custom-row-item button {
     width: 100%;
+    transition: var(--base-transition);
 }
 
 /* Article Page */
