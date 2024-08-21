@@ -6,15 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bududa Education Initiative</title>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 	<style>
 		:root {
 
 			/* colors */
 			--base-color: #f26522;
+			--bs-primary: #f26522;
+			--bs-btn-primary: #f26522;
 			--secondary-color: #f7f8fa;
 			--color-light: #fff;
 			--color-dark: #000;
@@ -28,6 +26,12 @@
 			/* font sizes */
 			--button-font-size: 11px;
 
+			/* margin and padding */
+			--base-margin: 3px;
+
+			/*transition*/
+			--base-transition: all .45s ease-in-out;
+
 			* {
 				box-sizing: border-box;
 			}
@@ -36,16 +40,25 @@
 				font-family: var(--base-font);
 			}
 
+			h1,
+			h2,
+			h3,
+			h4 {
+				font-family: var(--heading-font);
+			}
+
 			button {
 
 				background-color: var(--btn-bg-primary);
 				border: 1px solid gray;
 				border-radius: 0;
-				transition: none !important;
+				padding: 5px 10px;
+				;
+				transition: var(--base-transition);
 			}
 
 			button:hover {
-				background-color: var(--btn-bg-primary);
+				background-color: var(--color-light);
 				color: var(--color-dark);
 			}
 
@@ -64,7 +77,10 @@
 
 			.nav-brand p {
 				color: var(--base-color);
-				line-height: 12px;
+				text-wrap: nowrap;
+				line-height: 13px;
+
+
 			}
 
 			small {
@@ -72,7 +88,7 @@
 
 			}
 
-			nav a {
+			a {
 				text-decoration: none;
 				border-radius: 2px;
 				color: var(--color-dark);
@@ -80,28 +96,166 @@
 				transition: all .45s ease-in-out;
 			}
 
-			nav a:hover {
+			a:hover {
 				background-color: var(--base-color);
 				color: var(--color-light);
 
 			}
 
+			header a {
+				color: white;
+			}
+
+			header a:hover {
+				color: #000;
+			}
+
+			.header-wrapper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
 			.statement {
 				border: 1px solid var(--base-color);
 				background-color: var(--btn-bg-primary);
+				padding: 10px;
+			}
+
+			.pics-text-wrapper {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.right-section,
+			.left-section {
+				display: flex;
+				width: 50%;
 			}
 
 
+
+			.left-single,
+			.left-double {
+				width: 50%;
+			}
+
+			.left-single {
+				margin-right: var(--base-margin);
+			}
+
+			.left-single img,
+			.left-double img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.left-double {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				margin-left: var(--base-margin);
+
+			}
+
+			.left-double-wrapper-1,
+			.left-double-wrapper-2 {
+				height: 50%;
+			}
+
+			.left-double-wrapper-1 {
+				margin-bottom: var(--base-margin);
+			}
+
+			.left-double-wrapper-2 {
+				margin-top: var(--base-margin);
+			}
+
+
+
+			.right-section {
+				flex-direction: column;
+				justify-content: space-between;
+				/* align-items: center; */
+				margin-left: calc(var(--base-margin)*4);
+			}
+
+			.btn-bg-plain {
+				color: var(--base-color);
+				border: 1px solid var(--base-color);
+			}
+
+			.btn-bg-plain:hover {
+				color: var(--color-light);
+				background-color: var(--base-color);
+				border: none;
+			}
+
+			.progress-bar {
+				color: var(--base-color) !important;
+				background-color: var(--base-color);
+			}
+
+
+			@media (max-width:984px) {
+
+				.header-wrapper {
+					flex-direction: column;
+				}
+
+				.pics-text-wrapper {
+					flex-direction: column;
+				}
+
+				.left-section {
+					width: 100%;
+					flex-direction: column;
+
+				}
+
+				.left-single,
+				.left-double {
+					width: 100%;
+				}
+
+				/* .left-single img {
+					display: none;
+				} */
+
+				/* .left-single {
+					background-image: url('./assets/images/img01.jpg');
+					
+				} */
+
+				img {
+					padding: 5px 0;
+				}
+
+				.left-double {
+					flex-direction: column;
+				}
+
+				.right-section {
+					width: 100%;
+					margin: auto;
+				}
+			}
 
 
 
 		}
 	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
 </head>
 
 <body>
 
-	<p class="d-sm-block d-md-none">
+		<p class="d-sm-block d-md-none">
 			
 	This site ain't ready for a screen this wide yet.
 	</p>
@@ -109,12 +263,13 @@
 
 
 	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-2 social-widget text-white d-flex flex-row align-items-center">
+		<div class="container px-0">
+			<div class="header-wrapper ">
+				<div
+					class="w-17 social-widget text-white d-flex flex-row align-items-center justify-content-center text-center">
 					<ul class="list-unstyled d-flex flex-row align-items-center p-0 m-0">
-						<li>
-							<i class="fa  fa-facebook"></i>
+						<li class="ps-0">
+							<i class="fa  fa-facebook pe-0"></i>
 						</li>
 						<li>
 							<i class="fa fa-twitter"></i>
@@ -127,8 +282,8 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-8 contact-whrs text-white d-flex flex-row justify-content-end">
-					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center">
+				<div class="w-66 contact-whrs text-white d-flex flex-row justify-content-center">
+					<ul class="list-unstyled m-0 p-0 d-flex flex-column flex-md-row align-items-center text-nowrap">
 						<li>
 							<i class="fa fa-phone"></i>
 							0323232323
@@ -143,18 +298,18 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-2 ps-0 donate-join-btns">
+				<div class="w-17 ps-0 donate-join-btns d-flex flex-row justify-content-center align-items-center">
 					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center flex-nowrap">
 						<li>
-							<button class="btn btn-default btn-flat f-11 text-nowrap">
+							<a href="#" class="f-11 text-nowrap">
 								Donate Now
-							</button>
+							</a>
 
 						</li>
-						<li>
-							<button class="btn btn-default btn-flat f-11 text-nowrap">
+						<li class="pe-0">
+							<a href="#" class="f-11 text-nowrap me-0">
 								Join Us
-							</button>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -163,23 +318,52 @@
 	</header>
 	<nav class="sticky-top">
 		<div class="container">
-			<div class="row">
-				<div class="col-5 nav-brand d-flex flex-column py-3">
+			<div class="row nav-row px-3 px-md-0">
+				<div class="col-5 nav-brand d-flex flex-column py-3 ps-0">
 					<p class="ps-0 mb-0">Bududa Education Initiative</p>
 					<small class=" m-0 f-5 d-block">Extending Opportunity</small>
 				</div>
-				<div class="col-7 navlinks d-flex flex-row justify-content-end py-3 pe-0">
-					<ul>
+				<div class="col-7 navlinks  d-flex flex-row justify-content-end py-3 pe-0">
+					<ul class="d-none d-md-block">
 						<a href="" class="">Home</a>
 						<a href="">About</a>
 						<a href="">Join</a>
 					</ul>
+					<div class="hamburger-menu d-md-none">
+
+
+						<a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+							aria-controls="offcanvasExample">
+							<i class="fa fa-bars text-dark"></i>
+						</a>
+
+
+						<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+							aria-labelledby="offcanvasExampleLabel">
+							<div class="offcanvas-header">
+								<h5 class="offcanvas-title" id="offcanvasExampleLabel">Nav Menu</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+									aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body pt-0">
+								<div class="">
+
+									<ul class="">
+										<li><a class="dropdown-item" href="#">Home</a></li>
+										<li><a class="dropdown-item" href="#">About</a></li>
+										<li><a class="dropdown-item" href="#">Join</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
 				aria-current="true" aria-label="Slide 1"></button>
@@ -199,81 +383,106 @@
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img06.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-flex  flex-column justify-content-center  align-items-center ">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/img07.jpg" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption d-none d-md-flex  flex-column justify-content-center align-items-center">
 					<h1 class="f-30">DONATE</h1>
 					<h3>FOR THE POOR CHILDREN.</h3>
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-			data-bs-slide="prev">
+		<button class="carousel-control-prev bg-transparent border-0" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
 		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-			data-bs-slide="next">
+		<button class="carousel-control-next bg-transparent border-0" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
+	<div class="jumbotron-wrapper d-block d-md-none" style="background-image: url(./assets/images/img04.jpg);
+		background-position: center;
+		background-size: cover;">
+		<div class="container py-4">
+			<div class="jumbotron text-white">
+				<h1 class="display-4">DONATE</h1>
+				<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+					attention to featured content or information.</p>
+				<hr class="my-4">
+				<p>It uses utility classes for typography and spacing to space content out within the larger
+					container.</p>
+				<p class="lead">
+					<a class="btn-lg btn-bg-plain" href="#" role="button">Donate Now</a>
+				</p>
+			</div>
+		</div>
+
+	</div>
 	</section>
 	<section id="donate-cta-pics">
-		<div class="container pics-text mt-4">
-			<div class="row">
-				<div class="col-6 col-md-6">
-					<div class="row">
-						<div class="col-6 p-0">
-							<img src="./assets/images/img01.jpg" alt="" class="img-fluid w-100">
-						</div>
-						<div class="col-6 d-flex flex-column justify-content-between">
-							<img src="./assets/images/img02.jpg" alt="" class="img-fluid" style="height: 48%;">
-							<img src="./assets/images/img03.jpg" alt="" class="img-fluid" style="height: 48%;">
-						</div>
+		<div class="container pics-text-wrapper mt-4">
+
+			<div class="left-section">
+
+				<div class="left-single">
+					<div class="left-single-wrapper">
+						<img src="./assets/images/img01.jpg" alt="" class="img-fluid">
 					</div>
 
-
 				</div>
-				<div class="col-6 col-md-6 py-0 my-0 d-flex flex-column justify-content-between">
-					<h2 class="f-30 fw-bold">
-						Lorem ipsum dolor sit amet.
-					</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae iure ad. Itaque,
-						voluptates alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci non
-						id! Reprehenderit amet nesciunt libero eos obcaecati totam dolores!
-					</p>
-					<div class="cta-buttons">
-						<button class="f-15 btn-primary btn-flat">
-							Donate
-						</button>
-						<button class="f-15 btn-primary btn-flat">
-							Join
-						</button>
+				<div class="left-double">
+					<div class="left-double-wrapper-1">
+						<img src="./assets/images/img02.jpg" alt="" class="img-fluid">
 					</div>
-
-
+					<div class="left-double-wrapper-2">
+						<img src="./assets/images/img03.jpg" alt="" class="img-fluid">
+					</div>
 				</div>
+
+
+
 			</div>
+			<div class="right-section">
+				<h2 class="f-30 fw-bold">
+					Lorem ipsum dolor sit amet.
+				</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam recusandae iure ad. Itaque,
+					voluptates alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci non
+					id! Reprehenderit amet nesciunt libero eos obcaecati totam dolores!
+				</p>
+				<div class="cta-buttons">
+					<button class="f-15 btn-bg-plain">
+						Donate
+					</button>
+					<button class="f-15 btn-bg-plain">
+						Join
+					</button>
+				</div>
+
+
+			</div>
+
 
 
 
@@ -298,28 +507,194 @@
 			<div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active" data-bs-interval="10000">
-						<img src="./assets/images/img08.jpg" class="d-block " alt="...">
+						<div class="cause-thumb">
+							<img src="./assets/images/img08.jpg" class="d-block img-fluid" style="width: 100%;"
+								alt="...">
+						</div>
+
+						<div class="cause-details">
+							<div class="goal-status-text d-flex flex-row justify-content-between align-items-center">
+								<div class="raised">
+									<p>
+										Raised: <span>500$</span>
+									</p>
+								</div>
+								<div class="goal">
+									<p>
+										Goal: <span>1200$</span>
+									</p>
+								</div>
+							</div>
+							<h5 class="text-uppercase">Sponsor A Child Today</h5>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="cause-description">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum
+									nulla odit! Iure.
+								</p>
+							</div>
+							<div class="cause-cta-btn">
+								<button class="btn-bg-plain">
+									Help Now
+								</button>
+							</div>
+						</div>
 					</div>
 					<div class="carousel-item" data-bs-interval="2000">
-						<img src="./assets/images/img09.jpg" class="d-block " alt="...">
+						<div class="cause-thumb">
+							<img src="./assets/images/img09.jpg" class="d-block w-100" alt="...">
+						</div>
+
+						<div class="cause-details">
+							<div class="goal-status-text d-flex flex-row justify-content-between align-items-center">
+								<div class="raised">
+									<p>
+										Raised: <span>500$</span>
+									</p>
+								</div>
+								<div class="goal">
+									<p>
+										Goal: <span>1200$</span>
+									</p>
+								</div>
+							</div>
+							<h5 class="text-uppercase">Sponsor A Child Today</h5>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="cause-description">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum
+									nulla odit! Iure.
+								</p>
+							</div>
+							<div class="cause-cta-btn">
+								<button class="btn-bg-plain">
+									Help Now
+								</button>
+							</div>
+						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="./assets/images/img10.jpg" class="d-block " alt="...">
+						<div class="cause-thumb">
+							<img src="./assets/images/img10.jpg" class="d-block w-100" alt="...">
+						</div>
+
+						<div class="cause-details">
+							<div class="goal-status-text d-flex flex-row justify-content-between align-items-center">
+								<div class="raised">
+									<p>
+										Raised: <span>500$</span>
+									</p>
+								</div>
+								<div class="goal">
+									<p>
+										Goal: <span>1200$</span>
+									</p>
+								</div>
+							</div>
+							<h5 class="text-uppercase">Sponsor A Child Today</h5>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="cause-description">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum
+									nulla odit! Iure.
+								</p>
+							</div>
+							<div class="cause-cta-btn">
+								<button class="btn-bg-plain">
+									Help Now
+								</button>
+							</div>
+						</div>
 					</div>
 					<div class="carousel-item" data-bs-interval="2000">
-						<img src="./assets/images/img11.jpg" class="d-block " alt="...">
+						<div class="cause-thumb">
+							<img src="./assets/images/img11.jpg" class="d-block w-100" alt="...">
+						</div>
+
+						<div class="cause-details">
+							<div class="goal-status-text d-flex flex-row justify-content-between align-items-center">
+								<div class="raised">
+									<p>
+										Raised: <span>500$</span>
+									</p>
+								</div>
+								<div class="goal">
+									<p>
+										Goal: <span>1200$</span>
+									</p>
+								</div>
+							</div>
+							<h5 class="text-uppercase">Sponsor A Child Today</h5>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="cause-description">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum
+									nulla odit! Iure.
+								</p>
+							</div>
+							<div class="cause-cta-btn">
+								<button class="btn-bg-plain">
+									Help Now
+								</button>
+							</div>
+						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="./assets/images/img12.jpg" class="d-block " alt="...">
+						<div class="cause-thumb">
+							<img src="./assets/images/img12.jpg" class="d-block w-100" alt="...">
+						</div>
+
+						<div class="cause-details">
+							<div class="goal-status-text d-flex flex-row justify-content-between align-items-center">
+								<div class="raised">
+									<p>
+										Raised: <span>500$</span>
+									</p>
+								</div>
+								<div class="goal">
+									<p>
+										Goal: <span>1200$</span>
+									</p>
+								</div>
+							</div>
+							<h5 class="text-uppercase">Sponsor A Child Today</h5>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width:25%" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="cause-description">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit nostrum
+									nulla odit! Iure.
+								</p>
+							</div>
+							<div class="cause-cta-btn">
+								<button class="btn-bg-plain">
+									Help Now
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1"
-					data-bs-slide="prev">
+				<button class="carousel-control-prev bg-transparent border-0" type="button"
+					data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Previous</span>
 				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1"
-					data-bs-slide="next">
+				<button class="carousel-control-next bg-transparent border-0" type="button"
+					data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 				</button>
@@ -329,33 +704,7 @@
 	<section id="mission-statement">
 		<div class="container mt-5">
 			<div class="row mb-3">
-				<div class="col-xs-6 col-md-6">
-					<div class="statement">
-						<img src="" alt="">
-						<div class="statement-text">
-							<h2>Lorem, ipsum dolor.</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum, culpa
-								nesciunt.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-6">
-					<div class="statement">
-						<img src="" alt="">
-						<div class="statement-text">
-							<h2>Lorem, ipsum dolor.</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum, culpa
-								nesciunt.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row mb-3">
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6 mb-3">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -368,7 +717,38 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-6 col-md-6">
+				<div class="col-sm-6">
+					<div class="statement">
+						<img src="" alt="">
+						<div class="statement-text">
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum,
+								culpa
+								nesciunt.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col-sm-6 mb-3">
+					<div class="statement">
+
+						<div class="graphic">
+							<img src="" alt="">
+						</div>
+						<div class="statement-text">
+							<h2>Lorem, ipsum dolor.</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, nostrum. Illum,
+								culpa
+								nesciunt.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 ">
 					<div class="statement">
 						<img src="" alt="">
 						<div class="statement-text">
@@ -401,20 +781,20 @@
 				</div>
 			</div>
 
-			<div class="row section-pics">
-				<div class="col-md-4">
+			<div class="row section-pics align-items-center justify-content-center">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img13.jpg" alt="">
 						<p>Sakib Bobpon</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img14.jpg" alt="">
 						<p>Jero Hus</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
 					<div class="volunteer-pic">
 						<img src="./assets/images/img15.jpg" alt="">
 						<p>Epoa Wio</p>
@@ -427,15 +807,25 @@
 		</div>
 	</section>
 	<section id="cta-contact">
-		<div class="container-fkuid p-0 text-white">
-			<div class="cta-text text-center bg-dark py-3 opacity-50">
-				<P class="">
-					How you can reach out to help.
-				</P>
-				<p>
-					Just call <span>493490433</span>
-				</p>
+
+		<div class="container-fluid p-0 text-white">
+			<div class="cta-text  text-center" style="background-image: url('./assets/images/img17.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;">
+
+				<div class="z-index-1  cta-text-overlay bg-dark opacity-50  w-100">
+					<P class="z-index-5">
+						How you can reach out to help.
+					</P>
+					<p class="z-index-5">
+						Just call <span>493490433</span>
+					</p>
+				</div>
+
 			</div>
+
+
 		</div>
 
 	</section>
@@ -443,31 +833,61 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 form-div">
-					<form action="">
+					<div class="card w-100 my-4 px-4">
+						<div class="card-body">
+							<h5 class="card-title text-center py-2">Volunteer Registration Form</h5>
+							<form action="">
+								<div class="row">
+									<div class="ps-1 form-floating mb-3 col-sm-6">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3">First Name</label>
+									</div>
+									<div class="ps-1 form-floating mb-3 col-sm-6">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3 ms-0">Last Name</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="ps-1 form-floating mb-3 col-sm-12">
+										<input type="name" class=" form-control" id="floatingInput"
+											placeholder="name@example.com">
+										<label for="floatingInput" class="ps-3">Email</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="ps-1 col-sm-12">
+										<button class="py-3 btn-bg-plain w-100  rounded">Apply Now</button>
+									</div>
+								</div>
 
-					</form>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<footer>
 		<div class="container">
-			<div class="footer-contact d-flex flex-row align-items-center justify-content-between">
+			<div class="footer-contact d-flex flex-column flex-md-row align-items-center justify-content-between">
 				<p>BEI</p>
-				<ul class="list-unstyled list-inline d-flex flex-row ">
+				<ul
+					class="list-unstyled list-inline d-flex flex-column flex-md-row justify-content-center align-items-center ">
 					<li class="ps-3"> 123-456-789</li>
 					<li class="ps-3"> contact@gmail.com</li>
 					<li class="ps-3"> www.gmail.com</li>
 				</ul>
 			</div>
-			
+
 		</div>
 		<div class="copyright-div w-100 text-capitalize text-center text-white bg-dark py-3">
 			Copyright 2024. All rights reserved.
 		</div>
 
 	</footer>
-	</div>
+
 </body>
 
 </html>

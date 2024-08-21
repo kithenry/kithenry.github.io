@@ -291,6 +291,25 @@ footer a {
 
 /* || Specific page by page, context by context styling... */
 
+
+
+
+
+/* Home Page */
+
+.custom-row {
+    width: 100%;
+}
+
+.custom-row-item {
+    width: 30%;
+}
+
+.custom-row-item button {
+    width: 100%;
+    transition: var(--base-transition);
+}
+
 /* Article Page */
 
 
@@ -320,7 +339,10 @@ footer a {
     transition: var(--base-transition);
 }
 
-
+/* Contact Page */
+  .form-floating:focus {
+    border-color: var(--color-secondary);
+  }
 
 
 /* Media Queries */
