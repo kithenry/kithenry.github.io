@@ -40,15 +40,20 @@
 				font-family: var(--base-font);
 			}
 
-			h1, h2, h3, h4 {
+			h1,
+			h2,
+			h3,
+			h4 {
 				font-family: var(--heading-font);
 			}
+
 			button {
 
 				background-color: var(--btn-bg-primary);
 				border: 1px solid gray;
 				border-radius: 0;
-				padding: 5px 10px;;
+				padding: 5px 10px;
+				;
 				transition: var(--base-transition);
 			}
 
@@ -188,7 +193,7 @@
 			}
 
 			.progress-bar {
-				color: var(--base-color)!important;
+				color: var(--base-color) !important;
 				background-color: var(--base-color);
 			}
 
@@ -397,7 +402,7 @@
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button class="btn-bg-plain" >Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 		</div>
@@ -800,21 +805,24 @@
 	</section>
 	<section id="cta-contact">
 
-		<div class="container-fkuid p-0 text-white">
-			<div class="cta-text text-center bg-dark py-3 opacity-96" style="background-image: url('./assets/images/img17.jpg');
+		<div class="container-fluid p-0 text-white">
+			<div class="cta-text  text-center" style="background-image: url('./assets/images/img17.jpg');
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;">
-				<P class="">
-					How you can reach out to help.
-				</P>
-				<p>
-					Just call <span>493490433</span>
-				</p>
-			</div>
-			<div class="cta-text-overlay">
+
+				<div class="z-index-1  cta-text-overlay bg-dark opacity-50  w-100">
+					<P class="z-index-5">
+						How you can reach out to help.
+					</P>
+					<p class="z-index-5">
+						Just call <span>493490433</span>
+					</p>
+				</div>
 
 			</div>
+
+
 		</div>
 
 	</section>
