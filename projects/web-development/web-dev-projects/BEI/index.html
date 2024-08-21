@@ -12,6 +12,7 @@
 			/* colors */
 			--base-color: #f26522;
 			--bs-primary: #f26522;
+			--bs-btn-primary: #f26522;
 			--secondary-color: #f7f8fa;
 			--color-light: #fff;
 			--color-dark: #000;
@@ -28,6 +29,9 @@
 			/* margin and padding */
 			--base-margin: 3px;
 
+			/*transition*/
+			--base-transition: all .45s ease-in-out;
+
 			* {
 				box-sizing: border-box;
 			}
@@ -36,16 +40,20 @@
 				font-family: var(--base-font);
 			}
 
+			h1, h2, h3, h4 {
+				font-family: var(--heading-font);
+			}
 			button {
 
 				background-color: var(--btn-bg-primary);
 				border: 1px solid gray;
 				border-radius: 0;
-				transition: none !important;
+				padding: 5px 10px;;
+				transition: var(--base-transition);
 			}
 
 			button:hover {
-				background-color: var(--btn-bg-primary);
+				background-color: var(--color-light);
 				color: var(--color-dark);
 			}
 
@@ -75,7 +83,7 @@
 
 			}
 
-			nav a {
+			a {
 				text-decoration: none;
 				border-radius: 2px;
 				color: var(--color-dark);
@@ -83,10 +91,18 @@
 				transition: all .45s ease-in-out;
 			}
 
-			nav a:hover {
+			a:hover {
 				background-color: var(--base-color);
 				color: var(--color-light);
 
+			}
+
+			header a {
+				color: white;
+			}
+
+			header a:hover {
+				color: #000;
 			}
 
 			.header-wrapper {
@@ -160,6 +176,21 @@
 				margin-left: calc(var(--base-margin)*4);
 			}
 
+			.btn-bg-plain {
+				color: var(--base-color);
+				border: 1px solid var(--base-color);
+			}
+
+			.btn-bg-plain:hover {
+				color: var(--color-light);
+				background-color: var(--base-color);
+				border: none;
+			}
+
+			.progress-bar {
+				color: var(--base-color)!important;
+				background-color: var(--base-color);
+			}
 
 
 			@media (max-width:984px) {
@@ -262,15 +293,15 @@
 				<div class="w-17 ps-0 donate-join-btns d-flex flex-row justify-content-center align-items-center">
 					<ul class="list-unstyled m-0 p-0 d-flex flex-row align-items-center flex-nowrap">
 						<li>
-							<button class="btn btn-default btn-flat f-11 text-nowrap">
+							<a href="#" class="f-11 text-nowrap">
 								Donate Now
-							</button>
+							</a>
 
 						</li>
 						<li class="pe-0">
-							<button class="btn btn-default btn-flat f-11 text-nowrap me-0">
+							<a href="#" class="f-11 text-nowrap me-0">
 								Join Us
-							</button>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -293,7 +324,7 @@
 					<div class="hamburger-menu d-md-none">
 
 
-						<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+						<a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
 							aria-controls="offcanvasExample">
 							<i class="fa fa-bars text-dark"></i>
 						</a>
@@ -344,7 +375,7 @@
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -355,7 +386,7 @@
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain">Donate Now</button>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -366,17 +397,17 @@
 					<p>
 						Everytime Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, eos?
 					</p>
-					<button>Donate Now</button>
+					<button class="btn-bg-plain" >Donate Now</button>
 				</div>
 			</div>
 		</div>
-		<button class="carousel-control-prev bg-transparent border-0" type="button" data-bs-target="#carouselExampleCaptions"
-			data-bs-slide="prev">
+		<button class="carousel-control-prev bg-transparent border-0" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
 		</button>
-		<button class="carousel-control-next bg-transparent border-0" type="button" data-bs-target="#carouselExampleCaptions"
-			data-bs-slide="next">
+		<button class="carousel-control-next bg-transparent border-0" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
@@ -393,7 +424,7 @@
 				<p>It uses utility classes for typography and spacing to space content out within the larger
 					container.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="#" role="button">Donate Now</a>
+					<a class="btn-lg btn-bg-plain" href="#" role="button">Donate Now</a>
 				</p>
 			</div>
 		</div>
@@ -433,10 +464,10 @@
 					id! Reprehenderit amet nesciunt libero eos obcaecati totam dolores!
 				</p>
 				<div class="cta-buttons">
-					<button class="f-15 btn-primary btn-flat">
+					<button class="f-15 btn-bg-plain">
 						Donate
 					</button>
-					<button class="f-15 btn-primary btn-flat">
+					<button class="f-15 btn-bg-plain">
 						Join
 					</button>
 				</div>
@@ -498,7 +529,7 @@
 								</p>
 							</div>
 							<div class="cause-cta-btn">
-								<button>
+								<button class="btn-bg-plain">
 									Help Now
 								</button>
 							</div>
@@ -534,7 +565,7 @@
 								</p>
 							</div>
 							<div class="cause-cta-btn">
-								<button>
+								<button class="btn-bg-plain">
 									Help Now
 								</button>
 							</div>
@@ -570,7 +601,7 @@
 								</p>
 							</div>
 							<div class="cause-cta-btn">
-								<button>
+								<button class="btn-bg-plain">
 									Help Now
 								</button>
 							</div>
@@ -606,7 +637,7 @@
 								</p>
 							</div>
 							<div class="cause-cta-btn">
-								<button>
+								<button class="btn-bg-plain">
 									Help Now
 								</button>
 							</div>
@@ -642,7 +673,7 @@
 								</p>
 							</div>
 							<div class="cause-cta-btn">
-								<button>
+								<button class="btn-bg-plain">
 									Help Now
 								</button>
 							</div>
@@ -816,7 +847,7 @@
 								</div>
 								<div class="row">
 									<div class="ps-1 col-sm-12">
-										<button class="py-3 w-100 btn-primary rounded">Apply Now</button>
+										<button class="py-3 btn-bg-plain w-100  rounded">Apply Now</button>
 									</div>
 								</div>
 
