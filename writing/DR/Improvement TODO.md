@@ -1,0 +1,5 @@
+- transition to flask
+    - learn flask
+    - setup web hosting subscription (netomom)
+    - convert site to flask
+    - improve flask site (continuing)
