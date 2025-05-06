@@ -1,4 +1,4 @@
-## C++ Path Visualizer
+## C++ Path Finder Visualizer
 
 1. A path finder using the A* search algorithm
 	1. Build Finder Using Plan C++
