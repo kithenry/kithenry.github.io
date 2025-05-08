@@ -127,7 +127,8 @@ try:
 
     output_folder_name = output_folder_name_template.format(current_episode_number)
     print(f"Output folder name: {output_folder_name}")
-
+    
+    previous_episode_number = f"{previous_episode_number:03d}"  # Ensure 3-digit format (e.g., 001, 012)
     previous_post_link = previous_post_link_template.format(previous_episode_number, previous_episode_number)
     print(f"Previous post link: {previous_post_link}")
 
