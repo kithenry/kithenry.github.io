@@ -69,7 +69,7 @@ h3_text_file = "h3_text.txt"
 previous_episode_no_file = "previous_post_no.txt"
 main_content_file = "raw_html.txt"
 podcast_file_name_template = "./published_posts/DR_{}/DR_{}.m4a"
-previous_post_link_template = "./published_posts/DR_{}/DR_{}.html"
+previous_post_link_template = "../DR_{}/DR_{}.html"
 output_folder_name_template = "./published_posts/DR_{}/"
 output_html_file_name_template = "DR_{}.html"
        
