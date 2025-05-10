@@ -68,8 +68,8 @@ css = """
 h3_text_file = "h3_text.txt"
 previous_episode_no_file = "previous_post_no.txt"
 main_content_file = "raw_html.txt"
-podcast_file_name_template = "DR_{}.m4a"
-previous_post_link_template = "../published_posts/DR_{}/DR_{}.html"
+podcast_file_name_template = "./published_posts/DR_{}/DR_{}.m4a"
+previous_post_link_template = "./published_posts/DR_{}/DR_{}.html"
 output_folder_name_template = "./published_posts/DR_{}/"
 output_html_file_name_template = "DR_{}.html"
        
@@ -105,6 +105,9 @@ try:
     if os.path.exists(main_content_file):
         with open(main_content_file, 'r') as f:
             main_content = f.read().strip()
+        # delete main_content_file content
+        with open(main_content_file, 'w') as f:
+            f.write("")
     else:
         print(f"Error: {main_content_file} not found.")
         main_content = "<p>No content available.</p>"
@@ -119,7 +122,7 @@ try:
     print(f"Current episode number: {current_episode_number}")
 
     # Generate file names and links
-    podcast_file_name = podcast_file_name_template.format(current_episode_number)
+    podcast_file_name = podcast_file_name_template.format(current_episode_number, current_episode_number)
     print(f"Podcast file name: {podcast_file_name}")
 
     output_html_file_name = output_html_file_name_template.format(current_episode_number)
