@@ -21,7 +21,7 @@
 title: keith h. nambale
 email: kithstack@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Keith H. Nambale's Personal Blog. Writeups, Shared Links, Project Logs etc.
+  My Personal Blog. Writeups, shared Links, project logs ...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kithenry6
