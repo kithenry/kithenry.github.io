@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My first post!"
-date:   2025-05-31 00:11:41 +0300
+date:   2026-05-31 00:11:41 +0300
 categories: misc.
 ---
 This is a test blog.
