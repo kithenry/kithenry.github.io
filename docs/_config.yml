@@ -21,10 +21,10 @@
 title: keith h. nambale
 email: kithstack@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  My Personal Blog. Personal opinions on topics from: Engineering, Productivity, Finance, [..] 
+  My Personal Blog. I write about things. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kithenry6
+twitter_username: keithnambale
 github_username:  kithenry
 youtube_username: kithenry
 
