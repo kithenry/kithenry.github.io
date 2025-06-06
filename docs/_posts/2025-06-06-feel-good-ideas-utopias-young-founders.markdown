@@ -1,8 +1,10 @@
 ---
+title: feel-good-ideas,utopias,young-founders
 layout: post
-title:  "Feel good ideas| Utopias | Young Founders!"
-date:   2025-06-05  11:46:45 +0300
-categories: development misc.
+date: '2025-06-05 11:46:45 +0300'
+categories:
+- development
+- misc.
 ---
 
 | ![Young founders building Utopias with Code](https://media.licdn.com/dms/image/v2/D5612AQFom-FwCykkpA/article-cover_image-shrink_720_1280/B56ZdBDQqxG0AI-/0/1749143066177?e=1754524800&v=beta&t=AZrTwB1vTAh0halrVzyqlcz8-avIy593dHylVqLMPbQ) | 
@@ -31,4 +33,4 @@ But .. its lessons like these, I think, that eventually make of potential young 
 
 But have I dropped everything about the idea.. nope I haven't. I mentioned one reason the app would fail was people being less willing to provide help the more distant the helped was. So, if it was with friends that help matching was done... wouldn't it be more feasible.. 
 
-I'll let you off and get back to thinking.. but yeah.. hope reading my ramblings wasn't a waste of your time. 
+I'll let you off and get back to thinking.. but yeah.. hope reading my ramblings wasn't a waste of your time.
